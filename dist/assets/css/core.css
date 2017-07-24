@@ -1,0 +1,33 @@
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+.status-disabled a {
+  color: #f00;
+  pointer-events: none;
+}
+.c-system-status {
+  padding: 2rem;
+  background-color: #ccc;
+  border: 1px solid #888;
+}
+.c-system-status ul {
+  list-style: none;
+  margin: 0;
+}
+.c-system-status__status {
+  display: block;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 1px dotted #888;
+}
+.c-system-status__status--up:after {
+  content: "[stable]";
+  color: #008000;
+  margin-left: 1rem;
+}
+.c-system-status__status--down:after {
+  content: "[disabled]";
+  color: #f00;
+  margin-left: 1rem;
+}

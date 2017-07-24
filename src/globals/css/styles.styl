@@ -1,0 +1,39 @@
+body {
+  font-family: arial, helvetica, sans-serif
+}
+
+.status-disabled a{
+  color: red;
+  pointer-events: none
+}
+
+.c-system-status {
+  padding: 2rem;
+  background-color: #ccc;
+  border: 1px solid #888;
+  ul {
+    list-style: none;
+    margin:0;
+  }
+  &__status {
+    display: block;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 1px dotted #888
+    &--up {
+      &:after {
+        content: "[stable]";
+        color: green;
+        margin-left: 1rem;
+      }
+    }
+    &--down {
+      &:after {
+        content: "[disabled]";
+        color: red;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
