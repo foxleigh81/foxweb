@@ -1,14 +1,5 @@
-'use strict'
-
-const express = require('express')
-
-// Constants
-const PORT = 8080
-
-// App
-const app = express()
-
+var express = require('express')
+var app = express()
 app.use(express.static(__dirname + '/dist'))
 
-app.listen(PORT)
-console.log(`Running on ${PORT}`)
+app.listen(process.env.PORT || 5000)
