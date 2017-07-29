@@ -195,7 +195,7 @@ gulp.task('clean-all', function (done) {
 })
 
 gulp.task('build', function (done) {
-  return runSequence('clean-all', 'styles', 'scripts', 'vendors', 'static', function () {
+  return runSequence('clean-all', 'styles', 'views', function () {
     // Announce that the build is complete
     notifier.notify({ title: 'Build', message: 'Complete' })
     done()

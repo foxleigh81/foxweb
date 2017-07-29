@@ -21,18 +21,31 @@ body {
     font-size: 2rem;
     padding: 1rem;
     border-bottom: 1px dotted #888
+    &--up,
+    &--down,
+    &--unstable {
+      &:after {
+        font-weight: bold;
+        margin-left: 1rem;
+      }
+    }
+
     &--up {
       &:after {
         content: "[stable]";
         color: green;
-        margin-left: 1rem;
       }
     }
     &--down {
       &:after {
         content: "[disabled]";
         color: red;
-        margin-left: 1rem;
+      }
+    }
+    &--unstable {
+      &:after {
+        content: "[unstable]";
+        color: orange;
       }
     }
   }

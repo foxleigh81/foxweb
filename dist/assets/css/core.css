@@ -21,13 +21,21 @@ body {
   padding: 1rem;
   border-bottom: 1px dotted #888;
 }
+.c-system-status__status--up:after,
+.c-system-status__status--down:after,
+.c-system-status__status--unstable:after {
+  font-weight: bold;
+  margin-left: 1rem;
+}
 .c-system-status__status--up:after {
   content: "[stable]";
   color: #008000;
-  margin-left: 1rem;
 }
 .c-system-status__status--down:after {
   content: "[disabled]";
   color: #f00;
-  margin-left: 1rem;
+}
+.c-system-status__status--unstable:after {
+  content: "[unstable]";
+  color: #ffa500;
 }
