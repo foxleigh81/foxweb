@@ -1,0 +1,14 @@
+language: node_js
+node_js: stable
+before_script:
+- npm install -g gulp
+script: gulp build
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: sphDopqTrrIbwI6BxYQuXiDsuBHBpb0kj3MdbHfgrUp0QtLtF+bC/u9VOPj//F8t1yoq5ChWabF1Otik4wcKt5UryXvAx6/3Ox/gNInVtEQ6NrIZOdXGpsmqv8bZrRDUShkLP4WDcyzf0StPNITm1nDAhQHDbukGdjTijHUFzg0RrKMGjBPt+Ew4Rkj6fm16IKbJhR/pbfB8MBb3hT19Jnut/uowssuK+x1Mb/q0TGa8Mc2s2TH/nhDQliBdVLuSwhCv2ZMOLPFPt8+6zfZVd+GyZtRumMiq3vfIqPvBPeRakhM0Y410myEhrl+1VSU34HgKxbN7CJjrfM8XnEEcBWfcYE19zGoD0+fUeRiA9hAhOhHRv5regWQ+rOwTEyxEno4vNqdQvZZx9Hmt/ZUKyI90We/TQXzloBLb4+1GpqWedG8LbUdkP2FLW7A14/BKA6G4USKjnhF8ZUhng9zGE8ORgddRpEyKVwX2lvwuX2VSsJ1QPCq6yuOmIL6CE11sMktND6o/FAJPnDDJzQfdJISdlTvjRuF7D91kviTCQr32MDcgkuAoq9FiHzKTbx5uH1x24ZAknCfLzk1UqrM1NZtFXKK5GDBQ3ASexzmFeDH/4LHpEv9yGVeCxRvpyXZQ9RyGz3jH8RrulBh7AEp68KQQnhbQy1qSi/UizlCt+2o=
+  app:
+    master: foxweb
+  on:
+    repo: foxleigh81/foxweb
