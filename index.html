@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Foxweb</title>
+  <script>
+    var request
+    if (window.XMLHttpRequest) {
+      request = new XMLHttpRequest()
+    } else {
+      request = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    request.open('GET', 'http://www.mozilla.org', false)
+    request.send()
+    if (request.status === 404) {
+      alert('The page you are trying to reach is not available.')
+    }
+  </script>
 </head>
 <body>
   <h1> Foxweb is down </h1>
