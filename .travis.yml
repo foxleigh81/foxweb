@@ -1,6 +1,9 @@
 language: node_js
 node_js: stable
-script: npm build
+before_script:
+- yarn global add serve
+- yarn build
+script: serve -s build
 deploy:
   provider: heroku
   skip_cleanup: true
