@@ -1,1 +1,1 @@
-web: yarn install --production --no-progress && node server.js
+web: yarn start --release
