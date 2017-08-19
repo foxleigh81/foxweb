@@ -1,0 +1,67 @@
+{
+  "voice_command_config" : "1.0.0",
+  "command_list" : [
+    {
+      "command": "Turn on the lights",
+      "response" : "affirmation",
+      "action" : "bash lights_on",
+      "error" : "The lights are not responding, try again or use the manual switch."
+    },
+    {
+      "command": "Turn on the lights in the kitchen",
+      "response" : "affirmation",
+      "action" : "bash send_to_console kitchen => lights_on"
+    },
+    {
+      "command" : "What are you doing?",
+      "response" : [ "Your tiny mind can not possibly comprehend the answer to that question." ],
+      "action" : null,
+      "error" : null
+    }
+  ],
+  "response_types" : [
+    {
+      "type" : "affirmation",
+      "response" : [
+        "Sure thing",
+        "OK",
+        "Aye aye captain",
+        "Roger roger",
+        "Yeah, sure. Why not."
+      ]
+    },
+    {
+      "type" : "refusal-funny",
+      "response" : [
+        "Not a chance, buster",
+        "Nope",
+        "Nah",
+        "I can't be bothered",
+        "I'm sorry captain, I don't have the power"
+      ]
+    },
+    {
+      "type" : "refusal-serious",
+      "response" : [
+        "I can't do that",
+        "I don't have that ability, I'm afraid"
+      ]
+    },
+    {
+      "type" : "greeting",
+      "response" : [
+        "Hello",
+        "Howdy",
+        "Namaste"
+      ]
+    },
+    {
+      "type" : "farewell",
+      "response" : [
+        "Goodbye",
+        "Bobsled"
+      ]
+    }
+  ]
+
+}
