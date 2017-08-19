@@ -1,26 +1,24 @@
 language: node_js
 node_js:
-  - '8'
-  - '7'
-  - '6'
+- '8'
+- '7'
+- '6'
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
+    - g++-4.8
 script:
-  - yarn lint
-  - yarn test
+- yarn lint
+- yarn test
 deploy:
   provider: heroku
-  skip_cleanup: true
   api_key:
-    secure: sphDopqTrrIbwI6BxYQuXiDsuBHBpb0kj3MdbHfgrUp0QtLtF+bC/u9VOPj//F8t1yoq5ChWabF1Otik4wcKt5UryXvAx6/3Ox/gNInVtEQ6NrIZOdXGpsmqv8bZrRDUShkLP4WDcyzf0StPNITm1nDAhQHDbukGdjTijHUFzg0RrKMGjBPt+Ew4Rkj6fm16IKbJhR/pbfB8MBb3hT19Jnut/uowssuK+x1Mb/q0TGa8Mc2s2TH/nhDQliBdVLuSwhCv2ZMOLPFPt8+6zfZVd+GyZtRumMiq3vfIqPvBPeRakhM0Y410myEhrl+1VSU34HgKxbN7CJjrfM8XnEEcBWfcYE19zGoD0+fUeRiA9hAhOhHRv5regWQ+rOwTEyxEno4vNqdQvZZx9Hmt/ZUKyI90We/TQXzloBLb4+1GpqWedG8LbUdkP2FLW7A14/BKA6G4USKjnhF8ZUhng9zGE8ORgddRpEyKVwX2lvwuX2VSsJ1QPCq6yuOmIL6CE11sMktND6o/FAJPnDDJzQfdJISdlTvjRuF7D91kviTCQr32MDcgkuAoq9FiHzKTbx5uH1x24ZAknCfLzk1UqrM1NZtFXKK5GDBQ3ASexzmFeDH/4LHpEv9yGVeCxRvpyXZQ9RyGz3jH8RrulBh7AEp68KQQnhbQy1qSi/UizlCt+2o=
-  app:
-    master: foxweb
-    stage: foxweb-stage
+    secure: S7xH5GiHktX9o8s12ZZSv12qpbLsCjQbu7iWPq1AdYzmVtCfQUk7sdsPCPVD+cy/hTbqfxCGripCawxX0J4NErdUzmkugv736ymGwZjAZ6r6G3kp8aKTqdqzgO1FGwnaDJqqa0wnvYE/bW7I02mb8VPcTIzMtjG0DRCHDMq5LLWclQcBOwwHHXSr9U+YYEFxfa9cSAuAXgDWvpie8ZVGoQtxEPO0Ah5/0rmEudRWyBGuoIgvxsfISfJwks07LcKBitE1QpIfBW2PGfsuJRT4AYz5U2h92crOVP+NKoVOkH2uswSc4Vd4JD3sQhMp9ZNYATf90D3CkvIJGq/Z/e3K30iSZvkjviajEZGCnhXopUmzzzf4mlO5gD0Mn5ObhKZjNnVlELAJ5EvkVZcRFMk6UyIzmBAqSKh6wXq5sZrbFh/3fcZp1sdaS7+LDw5mFriJ6Q/hMX6hiGnpittktG92RM/bSKG1vGgiUe/XoNH/U3hYy80UMcCh1OGsnJ1tebcpCpyn3kEdVujvNSihVr+xmKKhWt3GBR+qAm3r6BXCY18HCx5pRGwDTZPFimWX5bcIkHsZPpqWgD+xYuDoWDaWpvrYUZBMymV82a9g3fd3e43UTwLZdadS7xI5gzlCYXrfQe5ecgdfBPrf30nsI6MkM4Tsuj3gqnZKjf4LR1cCi4s=
+  app: foxweb
   on:
     repo: foxleigh81/foxweb
+    branch: foxweb
