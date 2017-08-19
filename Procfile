@@ -1,1 +1,1 @@
-web: yarn start --release
+Web: "node server.js"
